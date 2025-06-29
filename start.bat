@@ -56,7 +56,7 @@ if %errorlevel% neq 0 (
 
 echo.
 echo Building standalone executable...
-bun run build
+bun build --compile --outfile=wallet-generator.exe ./wallet_generator.ts
 if %errorlevel% neq 0 (
     echo Failed to build executable
     pause
@@ -103,4 +103,4 @@ if %errorlevel% equ 0 (
     echo Wallet generator has stopped.
     pause
     exit /b 0
-) 
+)

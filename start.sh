@@ -45,7 +45,7 @@ bun install
 
 echo ""
 echo "Building standalone executable..."
-bun run build
+bun build --compile --outfile=wallet-generator ./wallet_generator.ts
 
 if [ ! -f "./wallet-generator" ]; then
     echo "❌ Error: wallet-generator executable not found!"
@@ -88,4 +88,4 @@ else
 fi
 
 # Wait for the background process
-wait $WALLET_PID 
+wait $WALLET_PID
